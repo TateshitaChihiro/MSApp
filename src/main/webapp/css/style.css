@@ -1,0 +1,521 @@
+@charset "UTF-8";
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	/* ページ全体の高さを確保 */
+}
+
+
+body {
+	font-family: "Source Sans Pro", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "Arial", sans-serif;
+	display: flex;
+	flex-direction: column;
+	/* 縦方向に要素を配置 */
+	min-height: 100vh;
+	/* ビューポートの高さを満たす */
+}
+
+main {
+	flex: 1;
+	/* メインコンテンツが残りの高さを埋める */
+}
+
+/* ヘッダーのスタイル */
+header {
+	display: flex;
+	/* 左右に要素を配置 */
+	justify-content: space-between;
+	/* 垂直方向を中央揃え */
+	align-items: center;
+	padding: 20px 60px;
+	background-color: #fff;
+	border-bottom: 1px solid #e9e7e7;
+}
+
+header>h1 {
+	flex: 1;
+}
+
+/* テキストロゴのスタイル */
+.logo {
+	font-size: 28px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #007bff;
+}
+
+.logo:hover {
+	/* ホバー時白く光る */
+	opacity: 0.8;
+}
+
+/* ログアウトボタンのスタイル */
+.logout-button {
+	padding: 10px 15px;
+	font-size: 16px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.logout-button:hover {
+	/* ホバー時白く光る */
+	opacity: 0.8;
+}
+
+.username {
+	color: #131313;
+	font-weight: 600;
+	margin-right: 20px;
+}
+
+/* フッターのスタイル */
+.footer {
+	text-align: center;
+	align-items: center;
+	padding: 28px;
+	font-size: 14px;
+	color: #fff;
+	background: #595959;
+}
+
+
+/* ページタイトルのスタイル */
+.title {
+	background-color: #e9e7e7;
+	/* 背景色を水色に設定 */
+	display: flex;
+	justify-content: center;
+	/* 水平方向の中央揃え */
+	align-items: center;
+	/* 垂直方向の中央揃え */
+	height: 70px;
+	/*	 タイトル領域を画面全体の高さに設定 */
+	margin: 20px 0;
+	/* 余白を設定 */
+	text-align: center;
+	/* テキストを中央揃え */
+}
+
+h2 {
+	font-size: 26px;
+	/* テキストサイズ */
+	line-height: 1.5;
+	/* 行間の調整 */
+}
+
+/* 会員検索、会員追加のform用 */
+/* フォームコンテナのスタイル */
+.form {
+	width: 40%;
+	/* 固定幅または必要に応じて調整 */
+	margin: 20px auto;
+	/* 上下のマージンを追加し、中央に配置 */
+	padding: 20px;
+	/* 内側のパディングを追加 */
+	background-color: #fff;
+	/* 背景色を追加 */
+	border-radius: 5px;
+	/* 角を丸くする */
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	/* シャドウを追加 */
+}
+
+.addForm {
+	width: 40%;
+	/* 固定幅または必要に応じて調整 */
+	margin: 20px auto;
+	/* 上下のマージンを追加し、中央に配置 */
+	padding: 20px;
+	/* 内側のパディングを追加 */
+	background-color: #fff;
+	/* 背景色を追加 */
+	border-radius: 5px;
+	/* 角を丸くする */
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	/* シャドウを追加 */
+}
+
+.editForm {
+	width: 40%;
+	/* 固定幅または必要に応じて調整 */
+	margin: 20px auto;
+	/* 上下のマージンを追加し、中央に配置 */
+	padding: 20px;
+	/* 内側のパディングを追加 */
+	background-color: #fff;
+	/* 背景色を追加 */
+	border-radius: 5px;
+	/* 角を丸くする */
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	/* シャドウを追加 */
+}
+
+/* フォーム項目名用 */
+label {
+	display: inline-block;
+	width: 200px;
+	vertical-align: top;
+}
+
+.formItem {
+	display: flex;
+	justify-content: flex-start;
+	/* 左寄せ */
+	align-items: center;
+	/* 垂直方向に中央揃え */
+	margin-bottom: 10px;
+}
+
+input {
+	width: 100%;
+	/* 親要素の幅に合わせる */
+	padding: 10px;
+	/* 内側のパディングを追加 */
+	box-sizing: border-box;
+	/* パディングを含めた幅を計算 */
+}
+
+/*検索、追加のボタン用*/
+.btn {
+	display: flex;
+	/* フレックスボックスを使用 */
+	justify-content: center;
+	margin-top: 20px;
+	/* 上部のスペースを追加 */
+}
+
+
+
+.loginbtn {
+	width: 100%;
+	/* 親要素の幅に合わせる */
+	padding: 10px;
+	/* 内側のパディングを追加 */
+	box-sizing: border-box;
+	/* パディングを含めた幅を計算 */
+}
+
+.addbtn {
+	width: 100%;
+	/* 親要素の幅に合わせる */
+	padding: 10px;
+	/* 内側のパディングを追加 */
+	box-sizing: border-box;
+	/* パディングを含めた幅を計算 */
+}
+
+.searchbtn {
+	width: 100%;
+	/* 親要素の幅に合わせる */
+	padding: 10px;
+	/* 内側のパディングを追加 */
+	box-sizing: border-box;
+	/* パディングを含めた幅を計算 */
+	margin: 10px;
+}
+
+.topbtn {
+	margin: 20px;
+	padding: 10px;
+	/* 内側のパディングを追加 */
+	box-sizing: border-box;
+	/* パディングを含めた幅を計算 */
+}
+
+.addBtn {
+	display: flex;
+	/* フレックスボックスを使用 */
+	justify-content: center;
+	margin-top: 20px;
+	/* 上部のスペースを追加 */
+}
+
+.editBtn {
+	display: flex;
+	/* フレックスボックスを使用 */
+	justify-content: center;
+	margin-top: 20px;
+	/* 上部のスペースを追加 */
+}
+
+.item {
+	display: flex;
+	/* ラベルとデータを横並びにする */
+	margin-bottom: 10px;
+	/* 項目ごとの間隔を調整 */
+}
+
+.labeldetail {
+	flex: 0 0 150px;
+	/* ラベルの幅を固定 */
+	font-weight: bold;
+	/* 必要であれば太字に */
+}
+
+.data {
+	flex: 1;
+	/* データ部分が残りのスペースを占有 */
+}
+
+textarea {
+	width: 100%;
+	/* 親要素に合わせる */
+	padding: 10px;
+	/* 内側の余白 */
+	box-sizing: border-box;
+	/* パディングを含めて幅を計算 */
+	border-radius: 5px;
+	/* 角を丸くする */
+	border: 1px solid #ccc;
+	/* ボーダー色 */
+	font-size: 14px;
+	/* 文字サイズ */
+	resize: vertical;
+	/* 高さの調整を許可 */
+}
+
+input[type="file"] {
+	font-size: 14px;
+	/* アップロードボタンの文字サイズ */
+}
+
+
+
+/*検索結果 一覧*/
+
+.projectlist {
+	width: fit-content;
+	margin: 20px 60px;
+	padding: 20px;
+	/* 内側のパディングを追加 */
+	background-color: #fff;
+	/* 背景色を追加 */
+	border-radius: 5px;
+	/* 角を丸くする */
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	/* シャドウを追加 */
+}
+
+
+.table_design08 {
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed;
+	/* 列の幅を固定 */
+}
+
+.table_design08 th {
+	background-color: #f2f2f2;
+	border: 1px solid #ddd;
+	padding: 8px;
+	text-align: left;
+}
+
+.table_design08 td {
+	border: 1px solid #ddd;
+	padding: 8px;
+	margin: 10px;
+	text-align: left;
+	word-break: break-all;
+	overflow-wrap: break-word;
+}
+
+.table_design08 th:nth-child(1),
+.table_design08 td:nth-child(1) {
+	width: 10%;
+	/* 1/10の比率 */
+}
+
+.table_design08 th:nth-child(2),
+.table_design08 td:nth-child(2) {
+	width: 60%;
+	/* 6/10の比率 */
+}
+
+.table_design08 th:nth-child(3),
+.table_design08 td:nth-child(3) {
+	width: 20%;
+	/* 2/10の比率 */
+}
+
+.table_design08 th:nth-child(4),
+.table_design08 td:nth-child(4) {
+	width: 10%;
+	/* 1/10の比率 */
+}
+
+/*詳細画面テーブル*/
+.table_design07 {
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed;
+	/* 列の幅を固定 */
+}
+
+.table_design07 th {
+	background-color: #f2f2f2;
+	border: 1px solid #ddd;
+	padding: 8px;
+	text-align: left;
+}
+
+.table_design07 td {
+	border: 1px solid #ddd;
+	padding: 8px;
+	margin: 10px;
+	text-align: left;
+	word-break: break-all;
+	overflow-wrap: break-word;
+}
+
+.table_design07 th:nth-child(1),
+.table_design07 td:nth-child(1) {
+	width: 10%;
+	/* 1/10の比率 */
+}
+
+.table_design07 th:nth-child(2),
+.table_design07 td:nth-child(2) {
+	width: 15%;
+	/* 6/10の比率 */
+}
+
+.table_design07 th:nth-child(3),
+.table_design07 td:nth-child(3) {
+	width: 55%;
+	/* 2/10の比率 */
+}
+
+.table_design07 th:nth-child(4),
+.table_design07 td:nth-child(4) {
+	width: 20%;
+	/* 1/10の比率 */
+}
+
+
+.inline-form {
+	display: inline;
+}
+
+.deleted-message {
+	color: tomato;
+	text-align: center;
+}
+
+@media screen and (max-width: 787px) {
+	.table_design08 {
+		text-align: left;
+	}
+
+	.table_design08 thead {
+		display: none;
+	}
+
+	.table_design08 th,
+	.table_design08 td {
+		display: block;
+		border: 0;
+		border-bottom: 2px solid #e6f1f6;
+	}
+
+	.table_design08 tbody th {
+		background: #f2f2f2;
+	}
+
+	.table_design08 td::before {
+		content: attr(data-label);
+		font-weight: bold;
+		display: inline-block;
+		width: 20%;
+		min-width: 4em;
+	}
+
+	.deleted-message {
+		color: tomato;
+		text-align: center;
+	}
+}
+
+/*TOP*/
+
+/*ボタン用*/
+.button01 {
+	display: block;
+	background-color: #fff;
+	border: solid 2px black;
+	color: black;
+	padding: 10px 30px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-decoration: none;
+	font-size: 1em;
+}
+
+.button01:hover {
+	opacity: 0.8;
+	background-color: rgb(219, 236, 255);
+}
+
+/* TOPフォームコンテナのスタイル */
+.formtop {
+	width: 30%;
+	/* 固定幅または必要に応じて調整 */
+	margin: 20px 0;
+	/* 上下のマージン */
+	margin-left: 60px;
+	/* 左側にスペースを追加 */
+	padding: 20px;
+	/* 内側のパディングを追加 */
+	background-color: #fff;
+	/* 背景色を追加 */
+	border-radius: 5px;
+	/* 角を丸くする */
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	/* シャドウを追加 */
+}
+
+/* ステータス変更用コンテナを上部に寄せる */
+.status-container {
+    display: flex;
+    align-items: flex-start; /* 要素を上部に寄せる */
+    gap: 10px;  /* セレクトボックスとボタンの間隔 */
+}
+
+/* セレクトボックスのスタイル */
+.status-container select {
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+/* ボタンのスタイル */
+.status-container button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 0;  /* 上部のマージンをリセット */
+}
+
+.status-container button:hover {
+    background-color: #0056b3;
+}
+
+/* ステータス変更のフォーム */
+.status-container form {
+    display: flex;
+    align-items: flex-start; /* 要素を上部に寄せる */
+    gap: 10px;
+    margin: 0;  /* 余計なマージンを排除 */
+    padding: 0;  /* 内側のパディングを排除 */
+}
