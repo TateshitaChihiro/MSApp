@@ -25,7 +25,7 @@ public class Logout extends HttpServlet {
             session.invalidate(); // セッションを無効化
         }
         // ログアウト後のリダイレクト先(ログインページへリダイレクト)
-        response.sendRedirect(request.getContextPath() + "/user/login.jsp");
+        response.sendRedirect(request.getContextPath() + "/Login");
     }
 
 	/**
